@@ -1,0 +1,35 @@
+// Your styles go here
+
+$primary: #268599;
+$secondary: #E6C82E;
+$light: #E3E9EB;
+$dark: #39494D;
+
+@import "bootstrap/scss/bootstrap";
+
+.hiddenCont{
+    display: none;
+}
+
+.trackingimg{
+    max-width: 25vw;
+}
+
+.skipLink{
+    position: absolute;
+    left: -100000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skipLink:focus{
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+.aboutMePic{
+    max-width: 50vw;
+}

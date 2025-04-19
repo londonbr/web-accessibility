@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Contact Me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./stylesheets/main.scss">
+</head>
+
+<body class="bg-light">
+  <a href="#mainContent" class="skipLink">Skip to Content</a>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Brinlee Luke</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav nav-pills me-auto mb-2 mb-lg-0" aria-label="Main Navigation">
+          <li class="nav-item">
+            <a class="nav-link" href="plain_language.html">Plain Language</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="site_design.html">Site Design</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about_me.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="contact_me.html">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-secondary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <header class="bg-dark text-light px-4 py-5 text-center">
+    <p class="text-white display-3">Contact Me</p>
+    <div class="">
+    </div>
+  </header>
+
+  <main class="container mt-4" id="mainContent">
+    <h1 class="text-center">Get in Touch</h1>
+
+    <p>Hello! I'd love to chat with you! Please fill out all required fields (indicated by the *) in the following form and you can expect a response in 3-5 business days.</p>
+
+    <form>
+      <fieldset class="mb-3 rounded-3 bg-light p-3">
+        <legend>Personal Information</legend>
+        <div class="row">
+          <div class="mb-3 col-md">
+            <label for="fullName" class="form-label bg-red" aria-required="true">Full Name*</label> <br>
+            <input type="text" name="fullname" id="fullName" required aria-required="true" class="form-control">
+          </div>
+          <div class="mb-3 col-md">
+            <label for="email" class="form-label requiredForm" aria-required="true">Email*</label><br>
+            <input type="email" name="email" id="email" required aria-required="true" class="form-control" aria-describedby="emailHelp" oninput="validateEmail(this.value)" >
+            <span id="live-region" class="live-region fw-bold text-decoration-underline" aria-live="assertive"></span>
+            <div id="emailHelp" class="form-text">I'll never share your email with anyone.</div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="mb-3 rounded-3 bg-light p-3">
+        <legend>Message</legend>
+        <label for="msgReason" class="form-label">Reason for Contacting:</label>
+        <select name="reason" id="msgReason" required aria-required="true" class="form-select">
+          <option value="">Please Select</option>
+          <option value="sayHello">Just saying "hi"</option>
+          <option value="collab">I want to collaborate</option>
+          <option value="feedback">I have some feedback</option>
+          <option value="bug">I found a bug/issue</option>
+        </select>
+        <label for="msgSubject" class="form-label">Subject</label>
+        <input type="text" name="subject" id="msgSubject" class="form-control-lg form-control">
+        <label for="msgContent" class="form-label requiredForm" aria-required="true">Content*</label>
+        <textarea name="message" id="msgContent" cols="30" rows="10" required aria-required="true" class="form-control"></textarea>
+      </fieldset>
+      <fieldset class="mb-3 rounded-3 bg-light p-3">
+        <legend>How did you hear about me?</legend>
+        <div class="formcheck">
+          <input type="checkbox" id="tookClass" name="tookClass" class="form-check-input">
+          <label for="tookClass" class="form-check-label">I took a class with you</label>
+        </div>
+        <div class="formcheck">
+          <input type="checkbox" id="friendClass" name="friendClass" class="form-check-input">
+          <label for="friendClass" class="form-check-label">A friend took a class with you</label>
+        </div>
+        <div class="formcheck">
+          <input type="checkbox" id="realLife" name="realLife" class="form-check-input">
+          <label for="realLife" class="form-check-label">I know you in real life, but not from class</label>
+        </div>
+      </fieldset>
+      <fieldset class="mb-3 rounded-3 bg-light p-3">
+        <legend>Do you want to be friends?</legend>
+        <div class="form-check">
+          <input type="radio" name="starbucks" id="naturally" class="form-check-input">
+          <label for="naturally" class="form-check-label">I would love to!</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" name="starbucks" id="nope" class="form-check-input">
+          <label for="nope" class="form-check-label">Nope.</label>
+        </div>
+      </fieldset>
+      <div>
+        <button type="submit" class="btn btn-primary py-2 fs-3 mt-4 shadow-sm">Send!</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="footer mt-auto py-3 bg-dark">
+    <div class="container text-center">
+      <span class="text-light">&copy; All Rights Reserved - 2023 Luke</span>
+    </div>
+  </footer>
+<script type="module" src="./javascripts/main.js"></script>
+</body>
+</html>
